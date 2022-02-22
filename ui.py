@@ -4,7 +4,7 @@ from tkinter import messagebox
 from tkinter.ttk import Separator
 from main import *
 from utils import *
-  
+
 window = Tk()
 window.title("Ad Prediction")
 window.geometry('1000x600')
