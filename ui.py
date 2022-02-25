@@ -6,7 +6,7 @@ from main import *
 from utils import *
 
 window = Tk()
-window.title("Ad Prediction")
+window.title("Let's Predict")
 window.geometry('1000x600')
 
 data = StringVar()
@@ -112,12 +112,14 @@ def show():
     check15.grid(column=1,row=5)
     check16 = Checkbutton(fram2, text='Fatigue', var=fatigue)
     check16.grid(column=2,row=5)
+    check17 = Checkbutton(fram2, text='Sore Throat', var=sore_throat)
+    check17.grid(column=1,row=6)
 
     separator = Separator(fram2, orient='horizontal')
-    separator.grid(row=6)
+    separator.grid(row=7)
 
     lbl2 = Label(fram2, text=" Check if you have following health condition")
-    lbl2.grid(column=2, row=7)
+    lbl2.grid(column=2, row=8)
 
     asthma = IntVar()
     asthma.set(0)
@@ -133,23 +135,23 @@ def show():
     gastro.set(0)
 
     check11 = Checkbutton(fram2, text='Asthma', var=asthma)
-    check11.grid(column=1,row=8)
+    check11.grid(column=1,row=9)
     check12 = Checkbutton(fram2, text='Chronic Lung Disease', var=chronic_lung)
-    check12.grid(column=2,row=8)
+    check12.grid(column=2,row=9)
     check13 = Checkbutton(fram2, text='Heart Disease', var=heart_disease)
-    check13.grid(column=1,row=9)
+    check13.grid(column=1,row=10)
     check14 = Checkbutton(fram2, text='Diabetes', var=diabetes)
-    check14.grid(column=2,row=9)
+    check14.grid(column=2,row=10)
     check15 = Checkbutton(fram2, text='Hyper Tension', var=hyper_tension)
-    check15.grid(column=1,row=10)
+    check15.grid(column=1,row=11)
     check16 = Checkbutton(fram2, text='Gastrointestinal', var=gastro)
-    check16.grid(column=2,row=10)\
+    check16.grid(column=2,row=11)\
 
     separator = Separator(fram2, orient='horizontal')
-    separator.grid(row=11)
+    separator.grid(row=12)
 
     lbl3 = Label(fram2, text=" Check if you have performed following activities lately")
-    lbl3.grid(column=2, row=12)
+    lbl3.grid(column=2, row=13)
 
     abroad = IntVar()
     abroad.set(0)
@@ -161,23 +163,23 @@ def show():
     visit.set(0)
 
     check11 = Checkbutton(fram2, text='Travelled Abroad', var=abroad)
-    check11.grid(column=2,row=13)
+    check11.grid(column=2,row=14)
     check12 = Checkbutton(fram2, text='Came in contact with COVID Patient', var=contact)
-    check12.grid(column=2,row=14)
+    check12.grid(column=2,row=15)
     check13 = Checkbutton(fram2, text='Attended Large Gathering', var=attend)
-    check13.grid(column=2,row=15)
+    check13.grid(column=2,row=16)
     check14 = Checkbutton(fram2, text='Visited Pulblic Exposed Place', var=visit)
-    check14.grid(column=2,row=16)
+    check14.grid(column=2,row=17)
 
     separator = Separator(fram2, orient='horizontal')
-    separator.grid(row=17)
+    separator.grid(row=18)
 
     family = IntVar()
     family.set(0)
     lbl = Label(fram2, text=" Do any of your family member work in public exzposed place: ")
-    lbl.grid(column=2, row=18)
-    Radiobutton(fram2, text= "Yes", variable=family, value=1).grid(column=1, row=19)
-    Radiobutton(fram2, text= "No", variable=family, value=0).grid(column=2, row=19)
+    lbl.grid(column=2, row=19)
+    Radiobutton(fram2, text= "Yes", variable=family, value=1).grid(column=1, row=20)
+    Radiobutton(fram2, text= "No", variable=family, value=0).grid(column=2, row=20)
 
     def covid_submit_clicked():
         new_input = list(map(int, [breathing_problem.get(), fever.get(), dry_cough.get(), sore_throat.get(), running_nose.get(), asthma.get(), chronic_lung.get(), headache.get(), heart_disease.get(), diabetes.get(), hyper_tension.get(), fatigue.get(), gastro.get(), abroad.get(), contact.get(), attend.get(), visit.get(), family.get()]))
